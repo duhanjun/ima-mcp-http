@@ -1,0 +1,18 @@
+{
+  "name": "create_note",
+  "description": "创建 IMA 笔记",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "description": "笔记标题"
+      },
+      "content": {
+        "type": "string",
+        "description": "笔记内容"
+      }
+    },
+    "required": ["title", "content"]
+  }
+}

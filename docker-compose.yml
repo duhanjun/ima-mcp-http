@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  ima-mcp:
+    build: .
+    container_name: ima-mcp
+    environment:
+      - IMA_OPENAPI_CLIENTID=${IMA_OPENAPI_CLIENTID}
+      - IMA_OPENAPI_APIKEY=${IMA_OPENAPI_APIKEY}
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    # 如果需要端口映射
+    # ports:
+    #   - "8000:8000"

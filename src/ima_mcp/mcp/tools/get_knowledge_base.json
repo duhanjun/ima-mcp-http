@@ -1,0 +1,14 @@
+{
+  "name": "get_knowledge_base",
+  "description": "获取 IMA 知识库详情",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "knowledge_base_id": {
+        "type": "string",
+        "description": "知识库 ID"
+      }
+    },
+    "required": ["knowledge_base_id"]
+  }
+}

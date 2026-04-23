@@ -1,0 +1,14 @@
+{
+  "name": "get_note",
+  "description": "获取 IMA 笔记内容",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "note_id": {
+        "type": "string",
+        "description": "笔记 ID"
+      }
+    },
+    "required": ["note_id"]
+  }
+}

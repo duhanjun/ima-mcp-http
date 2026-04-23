@@ -1,0 +1,19 @@
+{
+  "name": "search_notes",
+  "description": "搜索 IMA 笔记",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "搜索关键词"
+      },
+      "limit": {
+        "type": "number",
+        "description": "返回结果数量限制，最大为 20",
+        "default": 20
+      }
+    },
+    "required": ["query"]
+  }
+}

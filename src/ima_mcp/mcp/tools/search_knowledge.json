@@ -1,0 +1,23 @@
+{
+  "name": "search_knowledge",
+  "description": "在 IMA 知识库中搜索内容",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "knowledge_base_id": {
+        "type": "string",
+        "description": "知识库 ID"
+      },
+      "query": {
+        "type": "string",
+        "description": "搜索关键词"
+      },
+      "limit": {
+        "type": "number",
+        "description": "返回结果数量限制，最大为 20",
+        "default": 20
+      }
+    },
+    "required": ["knowledge_base_id", "query"]
+  }
+}

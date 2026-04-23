@@ -1,0 +1,22 @@
+{
+  "name": "upload_file",
+  "description": "上传文件到 IMA 知识库",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "knowledge_base_id": {
+        "type": "string",
+        "description": "知识库 ID"
+      },
+      "file_path": {
+        "type": "string",
+        "description": "文件路径"
+      },
+      "folder_id": {
+        "type": "string",
+        "description": "文件夹 ID，可选"
+      }
+    },
+    "required": ["knowledge_base_id", "file_path"]
+  }
+}
