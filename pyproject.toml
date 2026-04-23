@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "IMA OpenAPI MCP Service"
 readme = "README.md"
 authors = [
-    { name = "IMA MCP Team" }
+    { name = "Du Hanjun", email = "hanjun.du@outlook.com" }
 ]
 license = { file = "LICENSE" }
 dependencies = [
