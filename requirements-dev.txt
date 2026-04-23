@@ -1,0 +1,17 @@
+# 开发依赖
+
+# 基础依赖
+-r requirements.txt
+
+# 测试依赖
+pytest
+pytest-cov
+
+# 代码质量
+flake8
+black
+isort
+
+# 文档
+sphinx
+sphinx-rtd-theme
