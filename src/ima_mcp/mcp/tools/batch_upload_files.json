@@ -1,0 +1,25 @@
+{
+  "name": "batch_upload_files",
+  "description": "批量上传文件到 IMA 知识库",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "knowledge_base_id": {
+        "type": "string",
+        "description": "知识库 ID"
+      },
+      "file_paths": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "要上传的文件路径列表"
+      },
+      "folder_id": {
+        "type": "string",
+        "description": "文件夹 ID，可选"
+      }
+    },
+    "required": ["knowledge_base_id", "file_paths"]
+  }
+}

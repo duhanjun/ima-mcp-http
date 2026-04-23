@@ -1,0 +1,18 @@
+{
+  "name": "append_note",
+  "description": "追加内容到 IMA 笔记",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "note_id": {
+        "type": "string",
+        "description": "笔记 ID"
+      },
+      "content": {
+        "type": "string",
+        "description": "要追加的内容"
+      }
+    },
+    "required": ["note_id", "content"]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "batch_search_knowledge",
+  "description": "批量搜索 IMA 知识库",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "knowledge_base_id": {
+        "type": "string",
+        "description": "知识库 ID"
+      },
+      "queries": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "搜索关键词列表"
+      }
+    },
+    "required": ["knowledge_base_id", "queries"]
+  }
+}

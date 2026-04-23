@@ -1,0 +1,15 @@
+{
+  "name": "list_knowledge_bases",
+  "description": "获取 IMA 知识库列表",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "limit": {
+        "type": "number",
+        "description": "返回的知识库数量限制，最大为 20",
+        "default": 20
+      }
+    },
+    "required": []
+  }
+}
