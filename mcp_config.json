@@ -1,9 +1,10 @@
 {
   "mcpServers": {
     "ima-mcp": {
-      "command": "uv",
+      "command": "uvx",
       "args": [
-        "run",
+        "--with-editable",
+        ".",
         "ima-mcp"
       ],
       "env": {
