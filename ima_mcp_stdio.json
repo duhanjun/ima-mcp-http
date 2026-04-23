@@ -1,0 +1,230 @@
+{
+  "server_name": "ima_mcp_stdio",
+  "protocol": "stdio",
+  "executable_path": "python",
+  "executable_args": ["src/ima_mcp/main.py"],
+  "tools": [
+    {
+      "name": "check_credentials",
+      "description": "检查 IMA 凭证的有效性",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "list_knowledge_bases",
+      "description": "获取知识库列表",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "description": "返回的最大数量",
+            "default": 10
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "get_knowledge_base",
+      "description": "获取知识库详情",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "knowledge_base_id": {
+            "type": "string",
+            "description": "知识库 ID"
+          }
+        },
+        "required": ["knowledge_base_id"]
+      }
+    },
+    {
+      "name": "search_knowledge",
+      "description": "搜索知识库内容",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "knowledge_base_id": {
+            "type": "string",
+            "description": "知识库 ID"
+          },
+          "query": {
+            "type": "string",
+            "description": "搜索关键词"
+          }
+        },
+        "required": ["knowledge_base_id", "query"]
+      }
+    },
+    {
+      "name": "import_urls",
+      "description": "添加网页到知识库",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "knowledge_base_id": {
+            "type": "string",
+            "description": "知识库 ID"
+          },
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "要添加的网页 URL 列表"
+          }
+        },
+        "required": ["knowledge_base_id", "urls"]
+      }
+    },
+    {
+      "name": "upload_file",
+      "description": "上传文件到知识库",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "knowledge_base_id": {
+            "type": "string",
+            "description": "知识库 ID"
+          },
+          "file_path": {
+            "type": "string",
+            "description": "文件路径"
+          }
+        },
+        "required": ["knowledge_base_id", "file_path"]
+      }
+    },
+    {
+      "name": "batch_import_urls",
+      "description": "批量添加网页到知识库",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "knowledge_base_id": {
+            "type": "string",
+            "description": "知识库 ID"
+          },
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "要添加的网页 URL 列表"
+          }
+        },
+        "required": ["knowledge_base_id", "urls"]
+      }
+    },
+    {
+      "name": "batch_upload_files",
+      "description": "批量上传文件到知识库",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "knowledge_base_id": {
+            "type": "string",
+            "description": "知识库 ID"
+          },
+          "file_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "要上传的文件路径列表"
+          }
+        },
+        "required": ["knowledge_base_id", "file_paths"]
+      }
+    },
+    {
+      "name": "batch_search_knowledge",
+      "description": "批量搜索知识库内容",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "knowledge_base_id": {
+            "type": "string",
+            "description": "知识库 ID"
+          },
+          "queries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "搜索关键词列表"
+          }
+        },
+        "required": ["knowledge_base_id", "queries"]
+      }
+    },
+    {
+      "name": "search_notes",
+      "description": "搜索笔记",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "搜索关键词"
+          }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "create_note",
+      "description": "创建笔记",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "笔记标题"
+          },
+          "content": {
+            "type": "string",
+            "description": "笔记内容"
+          }
+        },
+        "required": ["title", "content"]
+      }
+    },
+    {
+      "name": "append_note",
+      "description": "追加内容到笔记",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "note_id": {
+            "type": "string",
+            "description": "笔记 ID"
+          },
+          "content": {
+            "type": "string",
+            "description": "要追加的内容"
+          }
+        },
+        "required": ["note_id", "content"]
+      }
+    },
+    {
+      "name": "get_note",
+      "description": "获取笔记内容",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "note_id": {
+            "type": "string",
+            "description": "笔记 ID"
+          }
+        },
+        "required": ["note_id"]
+      }
+    }
+  ]
+}
