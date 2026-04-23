@@ -21,9 +21,13 @@ RUN pip install -e .
 # 环境变量配置
 ENV IMA_OPENAPI_CLIENTID=""
 ENV IMA_OPENAPI_APIKEY=""
+# 默认使用 HTTP 模式
+ENV IMA_MCP_MODE="http"
+ENV IMA_MCP_HOST="0.0.0.0"
+ENV IMA_MCP_PORT="8000"
 
-# 暴露端口（如果需要）
-# EXPOSE 8000
+# 暴露端口
+EXPOSE 8000
 
 # 容器启动命令
-CMD ["bash"]
+CMD ["uvx", "ima-mcp"]

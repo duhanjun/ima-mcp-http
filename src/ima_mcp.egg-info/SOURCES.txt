@@ -4,6 +4,7 @@ src/ima_mcp/__init__.py
 src/ima_mcp/cache.py
 src/ima_mcp/client.py
 src/ima_mcp/credentials.py
+src/ima_mcp/http_server.py
 src/ima_mcp/knowledge_base.py
 src/ima_mcp/main.py
 src/ima_mcp/notes.py
