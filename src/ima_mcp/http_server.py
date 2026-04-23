@@ -17,10 +17,7 @@ from ima_mcp.notes import Notes
 # 初始化 FastAPI 应用
 app = FastAPI(title="IMA MCP HTTP Server", description="IMA OpenAPI MCP Service - HTTP Mode", version="1.0.0")
 
-# 初始化服务
-client = IMAClient()
-kb = KnowledgeBase()
-notes = Notes()
+# 服务将在 process_request 函数内部初始化
 
 # 定义请求和响应模型
 class ToolCallRequest(BaseModel):
@@ -41,6 +38,15 @@ class MCPResponse(BaseModel):
 def process_request(tool_name: str, params: Dict[str, Any]) -> Dict[str, Any]:
     """处理工具调用请求并返回结果"""
     try:
+        # 在函数内部初始化服务，确保环境变量已正确设置
+        from ima_mcp.client import IMAClient
+        from ima_mcp.knowledge_base import KnowledgeBase
+        from ima_mcp.notes import Notes
+        
+        client = IMAClient()
+        kb = KnowledgeBase()
+        notes = Notes()
+        
         # 处理不同的工具调用
         if tool_name == 'check_credentials':
             result = client.check_credentials()
