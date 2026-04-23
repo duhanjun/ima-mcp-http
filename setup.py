@@ -2,12 +2,15 @@ from setuptools import setup, find_packages
 
 setup(
     name="ima_mcp",
-    version="1.0.0",
+    version="1.1.0",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     install_requires=[
         "requests",
-        "urllib3"
+        "urllib3",
+        "fastapi",
+        "uvicorn",
+        "pydantic"
     ],
     author="IMA MCP Team",
     author_email="",
