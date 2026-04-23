@@ -5,10 +5,12 @@ src/ima_mcp/cache.py
 src/ima_mcp/client.py
 src/ima_mcp/credentials.py
 src/ima_mcp/knowledge_base.py
+src/ima_mcp/main.py
 src/ima_mcp/notes.py
 src/ima_mcp/utils.py
 src/ima_mcp.egg-info/PKG-INFO
 src/ima_mcp.egg-info/SOURCES.txt
 src/ima_mcp.egg-info/dependency_links.txt
+src/ima_mcp.egg-info/entry_points.txt
 src/ima_mcp.egg-info/requires.txt
 src/ima_mcp.egg-info/top_level.txt
