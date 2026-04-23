@@ -1,2 +1,0 @@
-[console_scripts]
-ima-mcp = ima_mcp.main:main
