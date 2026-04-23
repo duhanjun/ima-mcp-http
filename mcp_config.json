@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "ima-mcp": {
+      "command": "uv",
+      "args": [
+        "run",
+        "ima-mcp"
+      ],
+      "env": {
+        "IMA_OPENAPI_APIKEY": "y0mhfh3Fo0INSlQBXrqwVl+JaPNgrT2sEIsADmPko03zYd7jVi6QrdlNpLvEkE9UnqQsFdXAfA==",
+        "IMA_OPENAPI_CLIENTID": "0ebb2a4263625e43b2b8231cd2ec0a03"
+      }
+    }
+  }
+}
