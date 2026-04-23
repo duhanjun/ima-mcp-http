@@ -12,8 +12,8 @@ setup(
         "uvicorn",
         "pydantic"
     ],
-    author="IMA MCP Team",
-    author_email="",
+    author="Du Hanjun",
+    author_email="hanjun.du@outlook.com",
     description="IMA OpenAPI MCP Service",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
