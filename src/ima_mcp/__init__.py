@@ -1,2 +1,2 @@
-# IMA MCP HTTP Service
+# IMA MCP Service
 __version__ = "1.0.0"

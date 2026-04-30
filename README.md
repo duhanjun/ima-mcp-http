@@ -5,9 +5,10 @@
 ## 项目结构
 
 ```
-ima-mcp/
+ima_mcp/
 ├── README.md              # 项目说明
 ├── requirements.txt       # 依赖管理
+├── setup.py               # 安装配置
 ├── Dockerfile             # Docker 配置
 ├── docker-compose.yml     # Docker Compose 配置
 └── src/                   # 源代码目录
@@ -69,29 +70,6 @@ echo "your_api_key" > ~/.config/ima/api_key
 ### 1. stdio 模式（默认）
 
 适合本地开发和直接集成到 MCP 客户端。
-
-#### MCP 客户端配置
-
-在您的 MCP 客户端配置文件中添加以下配置：
-
-```json
-{
-  "mcpServers": {
-    "ima-mcp": {
-      "command": "uvx",
-      "args": [
-        "ima-mcp"
-      ],
-      "env": {
-        "IMA_OPENAPI_CLIENTID": "your_client_id",
-        "IMA_OPENAPI_APIKEY": "your_api_key"
-      }
-    }
-  }
-}
-```
-
-#### 直接运行方式
 
 ```bash
 # 配置环境变量
@@ -399,13 +377,15 @@ IMA_MCP_MODE=http ima-mcp
 
 ## 版本历史
 
+- **1.1.0**：新增 HTTP 模式
+  - 支持 stdio 和 http 两种接入方式
+  - 本地部署默认使用 stdio 模式
+  - Docker 部署默认使用 http 模式
+  - 新增 HTTP API 文档和健康检查端点
+
 - **1.0.0**：初始版本
   - 支持知识库管理
   - 支持笔记管理
   - 支持文件上传
   - 支持批量操作
   - 集成缓存机制
-  - 支持 stdio 和 http 两种接入方式
-  - 本地部署默认使用 stdio 模式
-  - Docker 部署默认使用 http 模式
-  - 新增 HTTP API 文档和健康检查端点

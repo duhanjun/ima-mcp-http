@@ -105,7 +105,7 @@ def process_request(tool_name: str, params: Dict[str, Any]) -> Dict[str, Any]:
 @app.get("/health")
 async def health_check():
     """健康检查端点"""
-    return {"status": "healthy", "service": "ima-mcp-server"}
+    return {"status": "healthy", "service": "ima-mcp-http-server"}
 
 @app.get("/")
 async def root():
