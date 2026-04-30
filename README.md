@@ -71,6 +71,29 @@ echo "your_api_key" > ~/.config/ima/api_key
 
 适合本地开发和直接集成到 MCP 客户端。
 
+#### MCP 客户端配置
+
+在您的 MCP 客户端配置文件中添加以下配置：
+
+```json
+{
+  "mcpServers": {
+    "ima-mcp": {
+      "command": "uvx",
+      "args": [
+        "ima-mcp"
+      ],
+      "env": {
+        "IMA_OPENAPI_CLIENTID": "your_client_id",
+        "IMA_OPENAPI_APIKEY": "your_api_key"
+      }
+    }
+  }
+}
+```
+
+#### 直接运行方式
+
 ```bash
 # 配置环境变量
 export IMA_OPENAPI_CLIENTID="your_client_id"
