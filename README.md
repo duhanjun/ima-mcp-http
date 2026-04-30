@@ -5,10 +5,9 @@
 ## 项目结构
 
 ```
-ima_mcp/
+ima-mcp/
 ├── README.md              # 项目说明
 ├── requirements.txt       # 依赖管理
-├── setup.py               # 安装配置
 ├── Dockerfile             # Docker 配置
 ├── docker-compose.yml     # Docker Compose 配置
 └── src/                   # 源代码目录
@@ -400,15 +399,13 @@ IMA_MCP_MODE=http ima-mcp
 
 ## 版本历史
 
-- **1.1.0**：新增 HTTP 模式
-  - 支持 stdio 和 http 两种接入方式
-  - 本地部署默认使用 stdio 模式
-  - Docker 部署默认使用 http 模式
-  - 新增 HTTP API 文档和健康检查端点
-
 - **1.0.0**：初始版本
   - 支持知识库管理
   - 支持笔记管理
   - 支持文件上传
   - 支持批量操作
   - 集成缓存机制
+  - 支持 stdio 和 http 两种接入方式
+  - 本地部署默认使用 stdio 模式
+  - Docker 部署默认使用 http 模式
+  - 新增 HTTP API 文档和健康检查端点

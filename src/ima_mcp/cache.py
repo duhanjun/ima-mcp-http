@@ -6,7 +6,7 @@ from typing import Any, Optional, Dict
 class Cache:
     """缓存机制"""
     
-    def __init__(self, cache_dir="~/.cache/ima_mcp", max_size=100, expiry=3600):
+    def __init__(self, cache_dir="~/.cache/ima-mcp", max_size=100, expiry=3600):
         """初始化缓存
         
         Args:

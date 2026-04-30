@@ -30,4 +30,4 @@ ENV IMA_MCP_PORT="8000"
 EXPOSE 8000
 
 # 容器启动命令
-CMD ["uvx", "ima-mcp"]
+CMD ["ima-mcp"]
