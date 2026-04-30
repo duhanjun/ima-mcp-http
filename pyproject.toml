@@ -3,9 +3,9 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ima-mcp-http"
+name = "ima-mcp"
 version = "1.0.0"
-description = "IMA OpenAPI MCP HTTP Service"
+description = "IMA OpenAPI MCP Service"
 readme = "README.md"
 authors = [
     { name = "Du Hanjun", email = "hanjun.du@outlook.com" }
@@ -21,8 +21,4 @@ dependencies = [
 requires-python = ">=3.7"
 
 [project.scripts]
-ima-mcp-http = "ima_mcp_http.main:main"
-
-# [project.urls]
-# "Homepage" = ""
-# "Repository" = ""
+ima-mcp = "ima_mcp.main:main"
