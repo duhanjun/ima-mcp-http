@@ -1,0 +1,6 @@
+# 依赖管理
+requests
+urllib3
+fastapi
+uvicorn
+pydantic

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ima-mcp"
+version = "1.0.0"
+description = "IMA OpenAPI MCP Service"
+readme = "README.md"
+authors = [
+    { name = "Du Hanjun", email = "hanjun.du@outlook.com" }
+]
+license = { file = "LICENSE" }
+dependencies = [
+    "requests",
+    "urllib3",
+    "fastapi",
+    "uvicorn",
+    "pydantic"
+]
+requires-python = ">=3.7"
+
+[project.scripts]
+ima-mcp = "ima_mcp.main:main"
+
+# [project.urls]
+# "Homepage" = ""
+# "Repository" = ""

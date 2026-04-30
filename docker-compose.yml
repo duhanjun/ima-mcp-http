@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  ima-mcp:
+    build: .
+    container_name: ima-mcp
+    environment:
+      - IMA_OPENAPI_CLIENTID=${IMA_OPENAPI_CLIENTID}
+      - IMA_OPENAPI_APIKEY=${IMA_OPENAPI_APIKEY}
+      - IMA_MCP_MODE=http
+      - IMA_MCP_HOST=0.0.0.0
+      - IMA_MCP_PORT=8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
