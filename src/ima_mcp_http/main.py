@@ -9,9 +9,9 @@ import os
 import sys
 import json
 
-from ima_mcp.client import IMAClient
-from ima_mcp.knowledge_base import KnowledgeBase
-from ima_mcp.notes import Notes
+from ima_mcp_http.client import IMAClient
+from ima_mcp_http.knowledge_base import KnowledgeBase
+from ima_mcp_http.notes import Notes
 
 def process_request(tool_name: str, params: dict) -> dict:
     """处理请求并返回响应"""
@@ -128,7 +128,7 @@ def run_stdio_mode():
 
 def run_http_mode():
     """运行 http 模式"""
-    from ima_mcp.http_server import start_http_server
+    from ima_mcp_http.http_server import start_http_server
     host = os.getenv("IMA_MCP_HOST", "0.0.0.0")
     port = int(os.getenv("IMA_MCP_PORT", "8000"))
     start_http_server(host, port)
